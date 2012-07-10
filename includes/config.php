@@ -3,6 +3,8 @@
 ini_set('display_errors',true);
 ini_set('error_reporting',E_ALL);
 
+include('functions.php');
+
 date_default_timezone_set('Australia/Brisbane'); // our timezone
 
 @mysql_connect('localhost','username','password'); // database login
