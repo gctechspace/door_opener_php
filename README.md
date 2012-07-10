@@ -13,4 +13,4 @@ Yes the code is horrible :) this was a quick solution to our missing garage door
                                                            |---{ethernet}--- [Arduino] --- RFID reader outside door
 
 Notes:
- - make sure google.cache file is writable by PHP if you wish to use Android push notifications.
+ - make sure  you create a google.cache file and it is writable by PHP if you wish to use Android push notifications.
