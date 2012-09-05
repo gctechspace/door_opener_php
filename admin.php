@@ -200,7 +200,7 @@ ob_start();
                     //echo $row['pin'] . " (".$row['name'].")";
                     echo '<em>'.$row['name'].'</em>'. ' <strong>(success!)</strong>';
                 }else{
-                    $row['pin_fail']
+                    echo $row['pin_fail'];
                     echo ' <strong>(fail)</strong>';
                 } ?>
                 </td>
