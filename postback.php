@@ -77,6 +77,14 @@ if(isset($_REQUEST['trigger'])){
 	}
     if(!$pin_id || $pin_id < 0){
         // no pin!
+$sql = "INSERT INTO `pin_access` SET ";
+        $sql .= " `time` = ".time()." ";
+        $sql .= " , `pin_id` = 0";
+        $sql .= " , `pin_action` = 0";
+        $sql .= " , `ip_address` = '".mysql_real_escape_string($_SERVER['REMOTE_ADDR'])."'";
+    $sql .= " , pin_fail = '".mysql_real_escape_string($_REQUEST['pin'])."'";
+        mysql_query($sql);
+
         mail(_ADMIN_NOTIFICATION_EMAIL,'techspace invalid pin from arduino - ON NO!',$_SERVER['REMOTE_ADDR']."\n".var_export($_REQUEST,true));
         header('HTTP/1.0 400 Error',true,400);
         echo "failed pin";
