@@ -200,8 +200,8 @@ ob_start();
                     //echo $row['pin'] . " (".$row['name'].")";
                     echo '<em>'.$row['name'].'</em>'. ' <strong>(success!)</strong>';
                 }else{
-                    //$row['pin_fail']
-                    echo '****' . ' <strong>(pin failure!)</strong>';
+                    $row['pin_fail']
+                    echo ' <strong>(fail)</strong>';
                 } ?>
                 </td>
                 <td>
@@ -222,7 +222,7 @@ ob_start();
                         echo "Admin";
                         break;
                     default:
-                        echo "N/A";
+                        echo "Fail";
                         break;
                 } ?>
                 </td>
